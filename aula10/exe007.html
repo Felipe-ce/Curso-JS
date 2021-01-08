@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somando numero</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    .contianer{
+      width: 300px;
+      height: 300px;
+      background-color: #e4d9d9;
+      padding: 10px;
+      text-align: center;
+    } 
+    p{
+      margin-bottom: 5px;
+    }
+    button{
+      display: block;
+
+      margin: 20px auto ;
+    }
+  </style>
+</head>
+<body>
+</body>
+
+  <section class="contianer">
+    <h4>Somando numero</h4>
+    <p>Primeiro numero</p>
+    <input type="number" required name="n1" id="n1">
+    <p>Segundo numero</p>
+    <input type="number" required name="n2" id="n2">
+    <button type="submit" onclick="somar()">Enviar</button>
+  </section>
+
+  <script>
+    function somar(params) {
+      let n1 = document.getElementById('n1');
+      let n2 = document.getElementById('n2');
+
+      let soma = n1 + n2;
+      // add o evento para somar
+
+    }
+  </script>
+</html> 

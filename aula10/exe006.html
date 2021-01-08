@@ -14,6 +14,9 @@
         line-height: 200px;
         text-align: center;
       }
+      .ativo{
+        background: red !important;
+      }
   </style>
 </head>
 <body>
@@ -23,6 +26,20 @@
   </div>
 
   <script>
-    let p1 = document.getElementsByTagName("p")[0]
+    var a = document.getElementById('area');
+    a.addEventListener('click', clicar);
+    a.addEventListener('mouseenter', enter);
+    a.addEventListener('mouseout', saiu);
+
+    function clicar() {
+      a.innerText = "Clicou";
+      a.style.background = 'red';
+    }
+    function enter() {
+      a.innerText = "entrou";
+    }
+    function saiu() {
+      a.innerText = "Saiu";
+    }
   </script>
 </html> 
