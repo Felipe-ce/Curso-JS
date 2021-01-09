@@ -18,10 +18,9 @@
     p{
       margin-bottom: 5px;
     }
-    button{
+    .btn{
       display: block;
-
-      margin: 20px auto ;
+      margin: 20px auto;
     }
   </style>
 </head>
@@ -34,16 +33,21 @@
     <input type="number" required name="n1" id="n1">
     <p>Segundo numero</p>
     <input type="number" required name="n2" id="n2">
-    <button type="submit" onclick="somar()">Enviar</button>
+    <input class="btn" type="button" value="Calcular" onclick="a()">
+    <div id="resultado">
+
+    </div>
   </section>
 
   <script>
-    function somar(params) {
-      let n1 = document.getElementById('n1');
-      let n2 = document.getElementById('n2');
-
+    function a() {
+      let num1 = document.getElementById('n1');
+      let num2 = document.getElementById('n2');
+      let resultado = document.getElementById('resultado');
+      let n1 = Number(num1.value)
+      let n2 = Number(num2.value)
       let soma = n1 + n2;
-      // add o evento para somar
+      resultado.innerHTML = `A soma é: ${soma}`;
 
     }
   </script>
