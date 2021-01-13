@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Braseileiro ou Estrangeiro</title>
+  <style>
+    div#res span{
+      text-transform: capitalize;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Multas</h1>
+  Pais em que nasceu <input type="txt" name="pais" id="pais">
+  <input type="button" value="Verificar" onclick="verificar()">
+
+  <div id="res">
+
+  </div>
+
+
+  <script>
+    
+    function verificar() {
+      let inputPais = document.getElementById('pais');
+      let res = document.querySelector('div#res');
+      let pais = inputPais.value;
+      pais = pais.toLowerCase();
+
+      res.innerHTML = `<p>País de origem: <span> <strong> ${pais} </strong></p>`;
+
+      if (pais != 'brasil') {
+        res.innerHTML += `<p><strong> Estrangeiro </strong></p>`;
+      }else{
+        res.innerHTML += `<p><strong> Brasileiro </strong></p>`;
+      }
+    }
+  </script>
+</body>
+</html>
