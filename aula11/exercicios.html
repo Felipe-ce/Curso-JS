@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+    <style>
+        .container{
+            display: grid;
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 34px;
+            background: #e0e0e0;
+            box-shadow:  -20px -20px 60px #bebebe,
+             20px 20px 60px #ffffff;
+
+        }
+        body{
+            font-size: 18px;
+            padding: 50px 10px;
+            background: #e0e0e0;
+        }
+        #resLetra, #resmedia{
+            height: 20px;
+        }
+        span, input{
+            max-width: 100px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>Verificar vogal ou consoante</h1>
+        <label for="letra">Insira uma letra</label>
+        <input type="text" maxlength="1" name="letra" id="letra">
+        <input type="button" value="Verificar" onclick="verLetra()">
+      
+        <div id="resLetra">
+      
+        </div>
+    </section>
+
+    <section class="container">
+        <h1>Calcular media</h1>
+        <div style="margin-bottom: 10px;">
+            <label for="nota1">Primeira Nota</label>
+            <input type="number" min="0" max="10" name="nota1" id="nota1">
+        </div>
+        <div>
+            <label for="nota2">Segunda Nota</label>
+            <input type="number" min="0" max="10" name="nota2" id="nota2">
+        </div>
+        <input type="button" value="Verificar" onclick="calcMedia()">
+        <div id="resmedia">
+      
+        </div>
+    </section>
+
+    <section class="container numero-maior">
+        <h1>Maior numero</h1>
+        <label for="numero1">Insira o primeiro numero</label>
+        <input type="number" name="numero1" id="numero">
+
+        <label for="numero2">Insira o segundo numero</label>
+        <input type="number" name="numero2" id="numero">
+
+        <label for="numero3">Insira o terceiro numero</label>
+        <input type="number" name="numero3" id="numero">
+
+        <input type="button" value="Verificar" onclick="numMaior()">
+        <div id="resNumMaior">
+      
+        </div>
+    </section>
+        
+
+    <script>
+        function verLetra() {
+            resultado = document.querySelector('div#resLetra')
+            let inputLetra = document.getElementById("letra");
+            let letra = inputLetra.value;
+            letra = letra.toLowerCase();
+
+            if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+                resultado.innerHTML = `A letra digitada: <strong> ${letra} </strong> é uma Vogal`;
+            } else if (letra == 'b' || letra == 'c' || letra == 'd' || letra == 'f' || letra == 'g' || letra == 'h' || letra == 'j' || letra == 'k' || letra == 'l' || letra == 'm' || letra == 'n' || letra == 'p' || letra == 'q' || letra == 'r' || letra == 's' || letra == 't' || letra == 'v' || letra == 'w' || letra == 'x' || letra == 'y' || letra == 'z') {
+                resultado.innerHTML = `<p>A letra digitada: <strong> ${letra} </strong> é uma consoante</p>`
+            } else{
+                resultado.innerHTML = `<p>O Caractere inserido: <strong> ${letra} </strong> não é uma letra</p>`
+            }
+        }
+        function calcMedia() {
+            resultado = document.querySelector('div#resmedia')
+            let inputN1 = document.querySelector("#nota1")
+            let inputN2 = document.querySelector("#nota2")
+            let nota1 = inputN1.value;
+            let nota2 = inputN2.value;
+            nota1 = Number(nota1)
+            nota2 = Number(nota2)
+
+            media = (nota1 + nota2) / 2;
+
+            resultado.innerHTML = `<p>Sua media é: <strong>${media}</strong></p>`
+
+        }
+        function numMaior() {
+            let numeros = document.querySelectorAll("#numero")
+            numeros.forEach
+        }
+    
+    </script>
+</body>
+</html>
