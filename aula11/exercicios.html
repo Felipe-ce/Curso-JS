@@ -62,13 +62,13 @@
     <section class="container numero-maior">
         <h1>Maior numero</h1>
         <label for="numero1">Insira o primeiro numero</label>
-        <input type="number" name="numero1" id="numero">
+        <input type="number" name="numero1" id="numero1">
 
         <label for="numero2">Insira o segundo numero</label>
-        <input type="number" name="numero2" id="numero">
+        <input type="number" name="numero2" id="numero2">
 
         <label for="numero3">Insira o terceiro numero</label>
-        <input type="number" name="numero3" id="numero">
+        <input type="number" name="numero3" id="numero3">
 
         <input type="button" value="Verificar" onclick="numMaior()">
         <div id="resNumMaior">
@@ -107,8 +107,32 @@
 
         }
         function numMaior() {
-            let numeros = document.querySelectorAll("#numero")
-            numeros.forEach
+            const resNumMaior = document.querySelector('.numero-maior #resNumMaior')
+            const inputNum1 = document.querySelector('#numero1')
+            const inputNum2 = document.querySelector('#numero2')
+            const inputNum3 = document.querySelector('#numero3')
+            let num1 = inputNum1.value
+            let num2 = inputNum2.value
+            let num3 = inputNum3.value
+
+            num1=Number(num1)
+            num2=Number(num2)
+            num3=Number(num3)
+
+
+            if (num2 == num1 || num3 == num1) {
+                resNumMaior.innerHTML = `<p>Numeros Repetidos</p>`
+            }
+            if (num2 > num1) {
+                resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num2}</strong></p>`
+            } else if (num3 > num1) {
+                resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num3}</strong></p>`
+            } else if ((num2 == num1 || num3 == num1)){
+                resNumMaior.innerHTML = `<p>Numeros Repetidos</p>`
+            } else{
+                resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num1}</strong></p>`
+            }
+
         }
     
     </script>
