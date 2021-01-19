@@ -95,7 +95,7 @@
 
 </div>
 </section> -->
-  <sec class="conteiner">
+  <sec class="container">
     <h1>Numero Maior e menor</h1>
 
     <label for="numero1">Insira o primeiro numero</label>
@@ -106,80 +106,119 @@
 
     <label for="numero1">Insira o primeiro numero</label>
     <input type="number" name="numero3" id="numero3">
+
+    <input type="button" value="Maior" onclick="numMaior()">
+    <input type="button" value="Menor" onclick="numMenor()">
+    <div id="resNumMaiorMenor">
+
+    </div>
   </sec>
 
   <script>
-// function verLetra() {
-//     resultado = document.querySelector('div#resLetra')
-//     let inputLetra = document.getElementById("letra");
-//     let letra = inputLetra.value;
-//     letra = letra.toLowerCase();
+    // function verLetra() {
+    //     resultado = document.querySelector('div#resLetra')
+    //     let inputLetra = document.getElementById("letra");
+    //     let letra = inputLetra.value;
+    //     letra = letra.toLowerCase();
 
-//     if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
-//         resultado.innerHTML = `A letra digitada: <strong> ${letra} </strong> é uma Vogal`;
-//     } else if (letra == 'b' || letra == 'c' || letra == 'd' || letra == 'f' || letra == 'g' || letra == 'h' || letra == 'j' || letra == 'k' || letra == 'l' || letra == 'm' || letra == 'n' || letra == 'p' || letra == 'q' || letra == 'r' || letra == 's' || letra == 't' || letra == 'v' || letra == 'w' || letra == 'x' || letra == 'y' || letra == 'z') {
-//         resultado.innerHTML = `<p>A letra digitada: <strong> ${letra} </strong> é uma consoante</p>`
-//     } else{
-//         resultado.innerHTML = `<p>O Caractere inserido: <strong> ${letra} </strong> não é uma letra</p>`
-//     }
-// }
+    //     if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+    //         resultado.innerHTML = `A letra digitada: <strong> ${letra} </strong> é uma Vogal`;
+    //     } else if (letra == 'b' || letra == 'c' || letra == 'd' || letra == 'f' || letra == 'g' || letra == 'h' || letra == 'j' || letra == 'k' || letra == 'l' || letra == 'm' || letra == 'n' || letra == 'p' || letra == 'q' || letra == 'r' || letra == 's' || letra == 't' || letra == 'v' || letra == 'w' || letra == 'x' || letra == 'y' || letra == 'z') {
+    //         resultado.innerHTML = `<p>A letra digitada: <strong> ${letra} </strong> é uma consoante</p>`
+    //     } else{
+    //         resultado.innerHTML = `<p>O Caractere inserido: <strong> ${letra} </strong> não é uma letra</p>`
+    //     }
+    // }
 
-// function calcMedia() {
-//     resultado = document.querySelector('div#resmedia')
-//     let inputN1 = document.querySelector("#nota1")
-//     let inputN2 = document.querySelector("#nota2")
-//     let nota1 = inputN1.value;
-//     let nota2 = inputN2.value;
-//     nota1 = Number(nota1)
-//     nota2 = Number(nota2)
+    // function calcMedia() {
+    //     resultado = document.querySelector('div#resmedia')
+    //     let inputN1 = document.querySelector("#nota1")
+    //     let inputN2 = document.querySelector("#nota2")
+    //     let nota1 = inputN1.value;
+    //     let nota2 = inputN2.value;
+    //     nota1 = Number(nota1)
+    //     nota2 = Number(nota2)
 
-//     media = (nota1 + nota2) / 2;
+    //     media = (nota1 + nota2) / 2;
 
-//     resultado.innerHTML = `<p>Sua media é: <strong>${media}</strong></p>`
-// }
+    //     resultado.innerHTML = `<p>Sua media é: <strong>${media}</strong></p>`
+    // }
 
-// function numMaior() {
-//     const resNumMaior = document.querySelector('.numero-maior #resNumMaior')
-//     const inputNum1 = document.querySelector('#numero1')
-//     const inputNum2 = document.querySelector('#numero2')
-//     const inputNum3 = document.querySelector('#numero3')
-//     let num1 = inputNum1.value
-//     let num2 = inputNum2.value
-//     let num3 = inputNum3.value
+    // function numMaior() {
+    //     const resNumMaior = document.querySelector('.numero-maior #resNumMaior')
+    //     const inputNum1 = document.querySelector('#numero1')
+    //     const inputNum2 = document.querySelector('#numero2')
+    //     const inputNum3 = document.querySelector('#numero3')
+    //     let num1 = inputNum1.value
+    //     let num2 = inputNum2.value
+    //     let num3 = inputNum3.value
 
-//     num1=Number(num1)
-//     num2=Number(num2)
-//     num3=Number(num3)
-
-
-//     if (num2 == num1 || num3 == num1) {
-//         resNumMaior.innerHTML = `<p>Numeros Repetidos</p>`
-//     }
-//     if (num2 > num1) {
-//         resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num2}</strong></p>`
-//     } else if (num3 > num1) {
-//         resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num3}</strong></p>`
-//     } else if ((num2 == num1 || num3 == num1)){
-//         resNumMaior.innerHTML = `<p>Numeros Repetidos</p>`
-//     } else{
-//         resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num1}</strong></p>`
-//     }
-// }
-
-// function NumMaiorMenor() {
-//     const resNumMaiorMenor = document.querySelector("#resNumMaiorMenor")
-//     let inputnum1 = document.querySelector('#numero1')
-//     let inputnum2 = document.querySelector('#numero2')
-//     let numero1 = inputnum1.value
-//     let numero2 = inputnum2.value
-//     numero1 = Number(numero1)
-//     numero2 = Number(numero2)
-//     let numero3 = numero1
-
-//     resNumMaiorMenor.innerHTML = `Numeros ${numero1} - ${numero2} <br>Numeros investidos ${numero2} - ${numero3}`
-// }
+    //     num1=Number(num1)
+    //     num2=Number(num2)
+    //     num3=Number(num3)
 
 
+    //     if (num2 == num1 || num3 == num1) {
+    //         resNumMaior.innerHTML = `<p>Numeros Repetidos</p>`
+    //     }
+    //     if (num2 > num1) {
+    //         resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num2}</strong></p>`
+    //     } else if (num3 > num1) {
+    //         resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num3}</strong></p>`
+    //     } else if ((num2 == num1 || num3 == num1)){
+    //         resNumMaior.innerHTML = `<p>Numeros Repetidos</p>`
+    //     } else{
+    //         resNumMaior.innerHTML = `<p>O maior numero é: <strong>${num1}</strong></p>`
+    //     }
+    // }
+
+    // function NumMaiorMenor() {
+    //     const resNumMaiorMenor = document.querySelector("#resNumMaiorMenor")
+    //     let inputnum1 = document.querySelector('#numero1')
+    //     let inputnum2 = document.querySelector('#numero2')
+    //     let numero1 = inputnum1.value
+    //     let numero2 = inputnum2.value
+    //     numero1 = Number(numero1)
+    //     numero2 = Number(numero2)
+    //     let numero3 = numero1
+
+    //     resNumMaiorMenor.innerHTML = `Numeros ${numero1} - ${numero2} <br>Numeros investidos ${numero2} - ${numero3}`
+    // }
+
+    function numMaior() {
+      const resultado = document.querySelector("#resNumMaiorMenor");
+
+      const nMaior = Number(document.querySelector('#numero1').value)
+      const n2 = Number(document.querySelector('#numero2').value)
+      const n3 = Number(document.querySelector('#numero3').value)
+
+      if (n2 > nMaior && n2 > n3) {
+        resultado.innerHTML = `<p>Maior numero: <strong>${n2}</strong></p>`;
+      } else if (n3 > nMaior) {
+        resultado.innerHTML = `<p>Maior numero: <strong>${n3}</strong></p>`;
+      } else if (n2 == nMaior || n3 == nMaior) {
+        resultado.innerHTML = `<p>Numeros Repetidos</p>`;
+      } else {
+        resultado.innerHTML = `<p>Maior numero: <strong>${nMaior}</strong></p>`;
+      }
+    }
+    function numMenor() {
+      const resultado = document.querySelector("#resNumMaiorMenor");
+
+      const nMenor = Number(document.querySelector('#numero1').value)
+      const n2 = Number(document.querySelector('#numero2').value)
+      const n3 = Number(document.querySelector('#numero3').value)
+
+      if (n2 < nMenor && n2 < n3) {
+        resultado.innerHTML = `<p>Menor numero: <strong>${n2}</strong></p>`;
+      } else if (n3 < nMenor) {
+        resultado.innerHTML = `<p>Maior numero: <strong>${n3}</strong></p>`;
+      } else if (n2 == nMenor && n3 == nMenor) {
+        resultado.innerHTML = `<p>Numeros Repetidos</p>`;
+      } else {
+        resultado.innerHTML = `<p>Maior numero: <strong>${nMenor}</strong></p>`;
+      }
+    }
   </script>
 </body>
 
