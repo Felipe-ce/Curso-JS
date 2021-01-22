@@ -11,13 +11,18 @@ header{
 }
 
 .container{
-  height: 100px;
   max-width: 600px;
-  background: #ffffff;
+  background: #fff;
   padding: 20px;
   margin: 0 auto;
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgb(204, 190, 190);
+  text-align: center;
+  font-size: 1.125em;
+  font-weight: bold;
+}
+.container img{
+  border-radius: 15px;
 }
 
 footer p{
