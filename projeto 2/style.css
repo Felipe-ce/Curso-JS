@@ -18,12 +18,7 @@ header{
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgb(204, 190, 190);
 }
-
-.teste{
-  padding: 10px;
-  text-align: center;
-}
-.teste img{
+img{
   border-radius: 15px;
 }
 
