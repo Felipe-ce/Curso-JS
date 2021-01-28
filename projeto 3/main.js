@@ -1,21 +1,23 @@
 function contar() {
   //pegar valores do input
-  let inicio = document.querySelector('#inicio')
-  let fim = document.querySelector('#fim')
+  let ini = document.querySelector('#txti')
+  let fim = document.querySelector('#txtf')
   let passo = document.querySelector('#passo')
   
   //pegando a div res
-  res = document.querySelector('.res')
+  let res = document.querySelector('.res')
 
-  console.log(inicio.typeof, fim.length, passo.length)
-
-
-  //Validação dos input
-  /*
-  if (inicio.length == 0 || fim.length == 0 || passo == 0) {
-    res.innerHTML = `<p>[ERRO] verifique os dados</p>`;
+  if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+    res.innerHTML = `<p>[ERRO!] Verifique os dados</p>`
   } else {
-    res.innerHTML = `<p>[ERRO] teste</p>`;
+    res.innerHTML = `Contando: ...`
+    i = Number(ini.value)
+    f = Number(fim.value)
+    p = Number(passo.value)
+
+    for(let c = i; c <= f; c +=p){
+      res.innerHTML += `${c}`
+    }
+
   }
-*/
 }
