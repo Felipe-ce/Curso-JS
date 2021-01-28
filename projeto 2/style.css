@@ -11,13 +11,20 @@ header{
 }
 
 .container{
-
   max-width: 600px;
   background: #ffffff;
   padding: 20px;
   margin: 0 auto;
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgb(204, 190, 190);
+}
+
+.teste{
+  padding: 10px;
+  text-align: center;
+}
+.teste img{
+  border-radius: 15px;
 }
 
 footer p{
