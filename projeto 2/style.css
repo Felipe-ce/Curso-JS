@@ -3,7 +3,7 @@
 }
 
 body{
-  background: #f0e9e9;
+  background: #ddc1c1;
   font-family: 'Courier New', Courier, monospace;
 }
 header{
@@ -11,7 +11,7 @@ header{
 }
 
 .container{
-  height: 100px;
+
   max-width: 600px;
   background: #ffffff;
   padding: 20px;
