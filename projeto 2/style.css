@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #f0e9e9;
+  font-family: 'Courier New', Courier, monospace;
+}
+header{
+  text-align: center;
+}
+
+.container{
+  height: 100px;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgb(204, 190, 190);
+}
+
+footer p{
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
