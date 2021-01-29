@@ -14,6 +14,7 @@ function contar() {
     i = Number(ini.value)
     f = Number(fim.value)
     p = Number(passo.value)
+    console.log(i, f ,p)
 
     for(let c = i; c <= f; c +=p){
       res.innerHTML += `${c}`
