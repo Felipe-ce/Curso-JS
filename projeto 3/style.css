@@ -1,16 +1,17 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   background: #f0e9e9;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
 }
-header{
+header {
   text-align: center;
 }
 
-.container{
+.container {
   max-width: 600px;
   background: #ffffff;
   padding: 20px;
@@ -18,13 +19,16 @@ header{
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgb(204, 190, 190);
 }
-.container div{
+.container div {
   margin-bottom: 10px;
 }
-.container label{
+.container label {
   margin-right: 10px;
 }
-footer p{
+.res span{ 
+  display: inline-block;
+}
+footer p {
   text-align: center;
   font-size: 14px;
   font-style: italic;
