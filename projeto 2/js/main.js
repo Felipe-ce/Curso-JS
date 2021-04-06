@@ -1,57 +1,5 @@
-function verificar() {
-  //Pegando os valores
-  let res = document.querySelector('#res');
-  let anoAtual = new Date().getFullYear();
-  let anoNascimento = Number(document.querySelector('#txtano').value);
-  let sexo = Number(document.querySelector('input[name="radsex"]:checked').value);
-  genero = '';
-  let img = document.createElement('img');
-  img.setAttribute('id', 'foto');
-
-
-  //Calcular idade
-  let idade =  anoAtual - anoNascimento;
-
-  if (anoNascimento == 0 || anoNascimento > anoAtual) {
-    res.innerHTML = `<p>[ERRO!] Verifique o ano de nascimento</p>`
-  } else {
-    if (sexo == 1) {
-      genero = 'Masculino'
-      if (idade >= 0 && idade < 10) { 
-        //criança
-        img.setAttribute('src', 'img/crianca-homem.jpg')
-      } else if (idade < 18){
-        //jovem
-        img.setAttribute('src', 'img/jovem-homem.jpg')
-      } else if(idade < 50) {
-        //adulto
-        img.setAttribute('src', 'img/adulto-homem.jpg')
-      }else{
-        //idoso
-        img.setAttribute('src', 'img/idoso-homem.jpg')
-      }
-    } else if (sexo == 2){
-        genero = 'Feminino'
-        if (idade >= 0 && idade < 10) { 
-          img.setAttribute('src', 'img/crianca-mulher.jpg')
-          //criança
-        } else if (idade < 18){
-          img.setAttribute('src', 'img/jovem-mulher.jpg')
-          //jovem
-        } else if(idade < 50) {
-          //adulta
-          img.setAttribute('src','img/adulta-mulher.jpg')
-        }else{
-          //idosa
-          img.setAttribute('src', 'img/idosa-mulher.jpg')
-        }
-      }
-      res.innerHTML = `<p>Detectamos ${genero} de ${idade} anos</p>`;
-      res.appendChild(img);
-    }
-
-}
-
+import verificarIdade from './modules/verificar-idade.js'
+verificarIdade()
 
 
   //verificar se o ano é valido
